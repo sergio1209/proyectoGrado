@@ -1,0 +1,95 @@
+<ion-card >
+    <ion-card-title>FORMULARIO DE REGISTRO DE PACIENTES</ion-card-title>
+   
+
+        <form [formGroup]="patientForm" (ngSubmit)="ngOnInit()">
+            <ion-item>
+                <ion-label position="floating" placeholder="identification" formControlName="identification">
+                    identification
+                </ion-label>
+                <ion-input></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating" placeholder="names" formControlName="names">names</ion-label>
+                <ion-input></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating" placeholder="surnames" formControlName="surnames">surnames</ion-label>
+                <ion-input></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating" placeholder="address" formControlName="address">address</ion-label>
+                <ion-input></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating" placeholder="DateofBirth" formControlName="DateofBirth">DateofBirth
+
+                </ion-label>
+                <ion-input></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating" placeholder="neighborhood" formControlName="neighborhood">neighborhood
+                </ion-label>
+                <ion-input></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating" placeholder="phone" formControlName="phone">phone</ion-label>
+                <ion-input></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating" placeholder="cellPhone" formControlName="cellPhone">cellPhone</ion-label>
+                <ion-input></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating" placeholder="mail" formControlName="mail">mail</ion-label>
+                <ion-input></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating" placeholder="guardian" formControlName="guardian">guardian</ion-label>
+                <ion-input></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating" placeholder="relationship" formControlName="relationship">relationship
+                </ion-label>
+                <ion-input></ion-input>
+            </ion-item>
+            <ion-item>
+
+                <ion-label position="floating" placeholder="cellPhoneGuardian" formControlName="cellPhoneGuardian">
+                    cellPhoneGuardian
+                </ion-label>
+                <ion-input></ion-input>
+            </ion-item>
+            <ion-item>
+
+                <ion-label position="floating" placeholder="addressGuardian" formControlName="addressGuardian">
+                    addressGuardian
+                </ion-label>
+                <ion-input></ion-input>
+            </ion-item>
+            <ion-item>
+
+                <ion-label position="floating" placeholder="agreement" formControlName="agreement">agreement</ion-label>
+                <ion-input></ion-input>
+            </ion-item>
+            <ion-item>
+
+                <ion-label position="floating" placeholder="licenseNumber" formControlName="licenseNumber">licenseNumber
+                </ion-label>
+                <ion-input></ion-input>
+            </ion-item>
+            <ion-item>
+
+                <ion-label position="floating" placeholder="EPS" formControlName="EPS">EPS</ion-label>
+                <ion-input></ion-input>
+            </ion-item>
+            <ion-item>
+
+                <ion-label position="floating" placeholder="TypeUser" formControlName="TypeUser">TypeUser</ion-label>
+                <ion-input></ion-input>
+            </ion-item>
+            <ion-button color="primary" type="submit">Guardar</ion-button>
+
+        </form>
+
+    </ion-card >

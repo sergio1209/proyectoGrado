@@ -1,0 +1,19 @@
+<div id="container">
+    <strong>FORMULARIO DE REGISTRO DE HISTORIAS CLINICAS</strong>
+    <form [formGroup]="clinicHistoryForm" (ngSubmit)="ngOnInit()">
+        <ion-col pull="string">
+            <ion-input placeholder="idPatient" formControlName="idPatient"></ion-input>
+            <ion-input placeholder="date" formControlName="date"></ion-input>
+            <ion-input placeholder="professional" formControlName="professional"></ion-input>
+            <ion-input placeholder="anamnesis" formControlName="anamnesis"></ion-input>
+            <ion-input placeholder="bloodPressure" formControlName="bloodPressure"></ion-input>
+            <ion-input placeholder="heartRate" formControlName="heartRate"></ion-input>
+            <ion-input placeholder="respiratoryRate" formControlName="respiratoryRate"></ion-input>
+            <ion-input placeholder="height" formControlName="height"></ion-input>
+            <ion-input placeholder="weight" formControlName="weight"></ion-input>
+            <ion-input placeholder="pulse" formControlName="pulse"></ion-input>
+            <ion-input placeholder="reasonConsultation" formControlName="reasonConsultation"></ion-input>
+            <ion-button color="primary" type="submit">Guardar</ion-button>
+        </ion-col>
+    </form>
+</div>

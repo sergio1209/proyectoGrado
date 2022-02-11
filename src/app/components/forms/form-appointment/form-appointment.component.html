@@ -1,0 +1,45 @@
+<ion-card>
+  <strong>FORMULARIO DE REGISTRO DE CITAS</strong>
+  <form [formGroup]="appointmentForm" (ngSubmit)="ngOnInit()">
+    <ion-grid>
+      <ion-row>
+        <ion-col pull="string" size="12">
+          <ion-item>
+            <ion-label position="floating" placeholder="idPatient" formControlName="idPatient">idPatient</ion-label>
+
+            <ion-input></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating" placeholder="dateAppointment" formControlName="dateAppointment">
+              dateAppointment
+            </ion-label>
+
+            <ion-input></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating" placeholder="date" formControlName="date">date</ion-label>
+
+            <ion-input></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating" placeholder="hours" formControlName="hours">hours</ion-label>
+
+            <ion-input></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating" placeholder="performAppointment" formControlName="performAppointment">
+              performAppointment</ion-label>
+
+            <ion-input></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating" placeholder="status" formControlName="status">status</ion-label>
+
+            <ion-input></ion-input>
+          </ion-item>
+          <ion-button color="primary" type="submit">Guardar</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-card>

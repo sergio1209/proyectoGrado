@@ -1,0 +1,55 @@
+<ion-card>
+    <ion-card-title>FORMULARIO DE REGISTRO DE OFTALMOLOGO</ion-card-title>
+    <form [formGroup]="ophthalmologistForm" (ngSubmit)="ngOnInit()">
+        <ion-col pull="string">
+            <ion-item>
+                <ion-label position="floating" placeholder="id" formControlName="id">id</ion-label>
+
+                <ion-input></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating" placeholder="names" formControlName="names">names</ion-label>
+
+
+                <ion-input></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating" placeholder="surnames" formControlName="surnames">surnames</ion-label>
+
+                <ion-input></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating" placeholder="specialty" formControlName="specialty">specialty</ion-label>
+
+                <ion-input></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating" placeholder="gender" formControlName="gender">gender</ion-label>
+
+                <ion-input></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating" placeholder="phone" formControlName="phone">phone</ion-label>
+
+                <ion-input></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating" placeholder="cellPhone" formControlName="cellPhone">cellPhone</ion-label>
+
+                <ion-input></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating" placeholder="address" formControlName="address">address</ion-label>
+
+                <ion-input></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating" placeholder="age" formControlName="age">age</ion-label>
+
+                <ion-input></ion-input>
+            </ion-item>
+
+            <ion-button color="primary" type="submit">Guardar</ion-button>
+        </ion-col>
+    </form>
+</ion-card>

@@ -1,0 +1,37 @@
+import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
+import { Patient } from 'src/models/patient.interface';
+import { PatientService } from 'src/services/patient.service';
+
+@Component({
+  selector: 'app-form-patient',
+  templateUrl: './form-patient.component.html',
+  styleUrls: ['./form-patient.component.css']
+})
+export class FormPatientComponent implements OnInit {
+  public patientForm = new FormGroup({
+    identification: new FormControl(''),
+    names: new FormControl(''),
+    surnames: new FormControl(''),
+    address: new FormControl(''),
+    DateofBirth: new FormControl(''),
+    neighborhood: new FormControl(''),
+    phone: new FormControl(''),
+    cellPhone: new FormControl(''),
+    mail: new FormControl(''),
+    guardian: new FormControl(''),
+    relationship: new FormControl(''),
+    cellPhoneGuardian: new FormControl(''),
+    addressGuardian: new FormControl(''),
+    agreement: new FormControl(''),
+    licenseNumber: new FormControl(''),
+    EPS: new FormControl(''),
+    TypeUser: new FormControl('')
+  });
+  constructor(private pati: PatientService) { }
+
+  ngOnInit(): void {
+    this.pati.Post('',<Patient>this.patientForm.value);
+  }
+
+}

@@ -1,0 +1,13 @@
+<div id="container">
+    <strong>FORMULARIO DE REGISTRO DE PRESCRIPCION</strong>
+    <form [formGroup]="prescriptionForm" (ngSubmit)="ngOnInit()">
+        <ion-col pull="string">
+            <ion-input placeholder="id" formControlName="id"></ion-input>
+            <ion-input placeholder="date" formControlName="date"></ion-input>
+            <ion-input placeholder="professional" formControlName="professional"></ion-input>
+            <ion-input placeholder="description" formControlName="description"></ion-input>
+            <ion-button color="primary" type="submit">Guardar</ion-button>
+        </ion-col>
+    </form>
+</div>
+
