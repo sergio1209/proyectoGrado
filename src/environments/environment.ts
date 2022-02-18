@@ -2,11 +2,9 @@
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
-
-
 export const environment = {
   production: false,
-  BACKEND: "https://oftal-ts.herokuapp.com/"
+  BACKEND: 'http://localhost:3000/'
 };
 
 /*

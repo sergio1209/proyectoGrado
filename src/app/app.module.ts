@@ -20,6 +20,6 @@ import { FormPrescriptionComponent } from './components/forms/form-prescription/
   imports: [BrowserModule, IonicModule.forRoot(),HttpClientModule,FormsModule,ReactiveFormsModule ,AppRoutingModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
-  
+
 })
 export class AppModule {}
