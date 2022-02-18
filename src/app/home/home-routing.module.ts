@@ -10,14 +10,14 @@ const routes: Routes = [
   {
     path: '',
     component: HomePage,
-    
+
       children: [
-        { path: 'form-diary', component: FormDiaryComponent },
-        { path: 'form-patient', component: FormPatientComponent },
-        { path: 'form-ophthalmologist', component: FormOphthalmologistComponent},
-        { path: 'form-appointment', component: FormAppointmentComponent}
+        { path: 'form-diary', component: FormDiaryComponent},
+        { path: 'form-patient', component: FormPatientComponent, data: { title: 'Formulario de paciente'} },
+        { path: 'form-ophthalmologist', component: FormOphthalmologistComponent, data: { title: 'Formulario de paciente 1'}},
+        { path: 'form-appointment', component: FormAppointmentComponent, data: { title: 'Formulario de paciente 2'}}
       ]
-    
+
   }
 
 ];

@@ -8,16 +8,14 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { FormPatientComponent } from './components/forms/form-patient/form-patient.component';
-import { FormAppointmentComponent } from './components/forms/form-appointment/form-appointment.component';
-import { FormClinicHistoryComponent } from './components/forms/form-clinic-history/form-clinic-history.component';
-import { FormDiaryComponent } from './components/forms/form-diary/form-diary.component';
-import { FormOphthalmologistComponent } from './components/forms/form-ophthalmologist/form-ophthalmologist.component';
-import { FormPrescriptionComponent } from './components/forms/form-prescription/form-prescription.component';
+import {FormsComponentsModule} from './components/forms/forms-components.module';
+
 @NgModule({
-  declarations: [AppComponent, FormPatientComponent, FormAppointmentComponent, FormClinicHistoryComponent, FormDiaryComponent, FormOphthalmologistComponent, FormPrescriptionComponent],
+  declarations: [
+    AppComponent,
+  ],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(),HttpClientModule,FormsModule,ReactiveFormsModule ,AppRoutingModule],
+  imports: [BrowserModule, IonicModule.forRoot(),HttpClientModule,FormsModule,ReactiveFormsModule ,AppRoutingModule, FormsComponentsModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 

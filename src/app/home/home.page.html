@@ -9,62 +9,64 @@
 
       <ion-content>
         <ion-list>
-        
           <ion-menu-toggle [autoHide]="false">
-            <ion-item button>
+            <ion-item button="true" routerLink="/home">
               <ion-icon slot="start" name='home'></ion-icon>
-              <ion-label>
+              <ion-label >
                 Home
               </ion-label>
             </ion-item>
-            <ion-item button>
+            <ion-item button="true" routerLink="/home/form-patient">
               <ion-icon slot="start" name="person-add-outline"></ion-icon>
-              <ion-label routerLink="/home/form-patient">
+              <ion-label >
                 Registrar Paciente
               </ion-label>
             </ion-item>
-            <ion-item button>
+            <ion-item button="true" routerLink="/home/form-ophthalmologist">
               <ion-icon slot="start" name="person-add-outline"></ion-icon>
-              <ion-label routerLink="/home/form-ophthalmologist">
+              <ion-label >
                 Registrar Oftalmólogo
               </ion-label>
             </ion-item>
-            <ion-item button>
+            <ion-item button="true" routerLink="/home/form-appointment">
               <ion-icon slot="start" name="calendar-outline"></ion-icon>
-              <ion-label routerLink="/home/form-appointment">
+              <ion-label >
                 Registrar Cita
               </ion-label>
             </ion-item>
-            <ion-item button>
+            <ion-item button="true" routerLink="/home">
               <ion-icon slot="start" name="newspaper-outline"></ion-icon>
-              <ion-label routerLink="/home">
+              <ion-label >
                  Historia Clínica
               </ion-label>
             </ion-item>
-            <ion-item button>
+            <ion-item button="true" routerLink="/home">
               <ion-icon slot="start" name="exit-outline"></ion-icon>
-              <ion-label routerLink="/home" >salir
-                
+              <ion-label >salir
               </ion-label>
             </ion-item>
           </ion-menu-toggle>
         </ion-list>
       </ion-content>
     </ion-menu>
-    
-    <div class="main">
-      
-      <router-outlet></router-outlet>
+
+    <div class="ion-page" id="main-content">
+      <ion-header>
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-menu-toggle>
+              <ion-button>
+                <ion-icon slot="icon-only" name="menu"></ion-icon>
+              </ion-button>
+            </ion-menu-toggle>
+          </ion-buttons>
+          <ion-title>{{header}}</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+        <router-outlet (activate)="onRouterOutletActivate($event)"></router-outlet>
+      </ion-content>
     </div>
-    
-    
-   
-    
-        
-        
-     
-     
-   
 
   </ion-split-pane>
 </ion-app>

@@ -19,7 +19,7 @@ export class FormUserComponent implements OnInit {
   constructor(private service: UserService) { }
 
   ngOnInit(): void {
-    this.service.Post('/user', <User>this.userForm.value);
+
   }
 
 }

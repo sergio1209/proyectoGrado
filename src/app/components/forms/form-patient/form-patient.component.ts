@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { Patient } from 'src/models/patient.interface';
 import { PatientService } from 'src/services/patient.service';
 
 @Component({
@@ -9,6 +8,9 @@ import { PatientService } from 'src/services/patient.service';
   styleUrls: ['./form-patient.component.css']
 })
 export class FormPatientComponent implements OnInit {
+
+  private header = 'FORMULARIO DE REGISTRO DE PACIENTES';
+
   public patientForm = new FormGroup({
     identification: new FormControl(''),
     names: new FormControl(''),
@@ -31,7 +33,7 @@ export class FormPatientComponent implements OnInit {
   constructor(private pati: PatientService) { }
 
   ngOnInit(): void {
-    this.pati.Post('',<Patient>this.patientForm.value);
+
   }
 
 }

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { Prescription } from 'src/models/prescription.interface';
 import { PrescriptionService } from 'src/services/prescription.service';
 
 @Component({
@@ -9,6 +8,7 @@ import { PrescriptionService } from 'src/services/prescription.service';
   styleUrls: ['./form-prescription.component.css']
 })
 export class FormPrescriptionComponent implements OnInit {
+  public header = 'FORMULARIO DE REGISTRO DE PACIENTES';
   public prescriptionForm = new FormGroup({
     id: new FormControl(''),
     date: new FormControl(''),
@@ -18,7 +18,8 @@ export class FormPrescriptionComponent implements OnInit {
   constructor(private presc: PrescriptionService) { }
 
   ngOnInit(): void {
-    this.presc.Post('', <Prescription>this.prescriptionForm.value);
+
   }
+
 
 }

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { Diary } from 'src/models/diary.interface';
 import { DiaryService } from 'src/services/diary.service';
 
 @Component({
@@ -9,6 +8,7 @@ import { DiaryService } from 'src/services/diary.service';
   styleUrls: ['./form-diary.component.css']
 })
 export class FormDiaryComponent implements OnInit {
+  private header = 'FORMULARIO DE REGISTRO DE AGENDA';
   public diaryForm = new FormGroup({
     idPatient: new FormControl(''),
     namePatient: new FormControl(''),
@@ -20,7 +20,7 @@ export class FormDiaryComponent implements OnInit {
   constructor(private dia: DiaryService) { }
 
   ngOnInit(): void {
-    this.dia.Post('',<Diary>this.diaryForm.value);
+
   }
 
 }

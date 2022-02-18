@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { ClinicHistory } from 'src/models/clinicHistory.interface';
 import { ClinicHistoryService } from 'src/services/clinicHistory.service';
 
 @Component({
@@ -9,6 +8,7 @@ import { ClinicHistoryService } from 'src/services/clinicHistory.service';
   styleUrls: ['./form-clinic-history.component.css']
 })
 export class FormClinicHistoryComponent implements OnInit {
+  private header = 'FORMULARIO DE REGISTRO DE HISTORIAS CLINICAS';
   public clinicHistoryForm = new FormGroup({
     idPatient: new FormControl(''),
     date: new FormControl(''),
@@ -25,7 +25,6 @@ export class FormClinicHistoryComponent implements OnInit {
   constructor(private ch: ClinicHistoryService) { }
 
   ngOnInit(): void {
-    this.ch.Post('',<ClinicHistory>this.clinicHistoryForm.value);
   }
 
 }

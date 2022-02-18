@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { Ophthalmologist } from 'src/models/ophthalmologist.interface';
 import { OphthalmologistService } from 'src/services/ophthalmologist.service';
 
 @Component({
@@ -9,6 +8,7 @@ import { OphthalmologistService } from 'src/services/ophthalmologist.service';
   styleUrls: ['./form-ophthalmologist.component.css']
 })
 export class FormOphthalmologistComponent implements OnInit {
+  private header = 'FORMULARIO DE REGISTRO DE OFTALMOLOGO';
   public ophthalmologistForm = new FormGroup({
     id: new FormControl(''),
     names: new FormControl(''),
@@ -24,7 +24,6 @@ export class FormOphthalmologistComponent implements OnInit {
   constructor(private oph: OphthalmologistService) { }
 
   ngOnInit(): void {
-    this.oph.Post('',<Ophthalmologist>this.ophthalmologistForm.value);
   }
 
 }

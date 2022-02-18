@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { Appointment } from 'src/models/appointment.interface';
 import { AppointmentService } from 'src/services/appointment.service';
 
 @Component({
@@ -9,6 +8,7 @@ import { AppointmentService } from 'src/services/appointment.service';
   styleUrls: ['./form-appointment.component.css']
 })
 export class FormAppointmentComponent implements OnInit {
+  private header = 'FORMULARIO DE REGISTRO DE CITAS';
   public appointmentForm = new FormGroup({
     idPatient: new FormControl(''),
     dateAppointment: new FormControl(''),
@@ -21,7 +21,6 @@ export class FormAppointmentComponent implements OnInit {
   constructor(private appo: AppointmentService) { }
 
   ngOnInit(): void {
-    this.appo.Post('',<Appointment>this.appointmentForm.value);
   }
 
 }
