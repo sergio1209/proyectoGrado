@@ -23,4 +23,8 @@ export class FormAppointmentComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  submit() {
+    this.appo.up(this.appointmentForm.value);
+  }
+
 }

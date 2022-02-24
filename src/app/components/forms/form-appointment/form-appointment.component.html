@@ -1,6 +1,6 @@
 <ion-card>
   <ion-card-content>
-  <form [formGroup]="appointmentForm" (ngSubmit)="ngOnInit()">
+  <form [formGroup]="appointmentForm" (ngSubmit)="appointmentForm.valid && submit()">
     <ion-grid>
       <ion-row>
         <ion-col pull="string" size="12">
