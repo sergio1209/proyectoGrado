@@ -4,39 +4,45 @@
     <ion-grid>
       <ion-row>
         <ion-col pull="string" size="12">
-          <ion-item>
+          <ion-item lines="inset" >
             <ion-label position="floating" >idPatient</ion-label>
-            <ion-input placeholder="idPatient" formControlName="idPatient"></ion-input>
+            <ion-input placeholder="idPatient" formControlName="idPatient" required></ion-input>
           </ion-item>
-          <ion-item>
+          <ion-item lines="inset" >
             <ion-label position="floating" >
               dateAppointment
             </ion-label>
 
-            <ion-input placeholder="dateAppointment" formControlName="dateAppointment"></ion-input>
+            <ion-input placeholder="dateAppointment" formControlName="dateAppointment" required></ion-input>
           </ion-item>
-          <ion-item>
+          <ion-item lines="inset" >
             <ion-label position="floating" >date</ion-label>
 
-            <ion-input placeholder="date" formControlName="date"></ion-input>
+            <ion-input placeholder="date" formControlName="date" required></ion-input>
           </ion-item>
-          <ion-item>
+          <ion-item lines="inset" >
             <ion-label position="floating" >hours</ion-label>
 
-            <ion-input placeholder="hours" formControlName="hours"></ion-input>
+            <ion-input placeholder="hours" formControlName="hours" required></ion-input>
           </ion-item>
-          <ion-item>
+          <ion-item lines="inset" >
             <ion-label position="floating" >
               performAppointment</ion-label>
 
-            <ion-input placeholder="performAppointment" formControlName="performAppointment"></ion-input>
+            <ion-input placeholder="performAppointment" formControlName="performAppointment" required></ion-input>
           </ion-item>
-          <ion-item>
+          <ion-item lines="inset" >
             <ion-label position="floating" >status</ion-label>
 
-            <ion-input placeholder="status" formControlName="status"></ion-input>
+            <ion-input placeholder="status" formControlName="status" required></ion-input>
           </ion-item>
-          <ion-button color="primary" type="submit">Guardar</ion-button>
+
+          <ion-item lines="inset" >
+            <ion-label position="floating" >duration</ion-label>
+
+            <ion-input placeholder="status" formControlName="duration" required></ion-input>
+          </ion-item>
+          <ion-button disabled="{{appointmentForm.valid == false}}" color="primary" type="submit">Guardar</ion-button>
         </ion-col>
       </ion-row>
     </ion-grid>

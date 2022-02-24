@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AppointmentService } from 'src/services/appointment.service';
 
 @Component({
@@ -10,13 +10,13 @@ import { AppointmentService } from 'src/services/appointment.service';
 export class FormAppointmentComponent implements OnInit {
   private header = 'FORMULARIO DE REGISTRO DE CITAS';
   public appointmentForm = new FormGroup({
-    idPatient: new FormControl(''),
-    dateAppointment: new FormControl(''),
-    date: new FormControl(''),
-    hours: new FormControl(''),
-    performAppointment: new FormControl(''),
-    duration: new FormControl(''),
-    status: new FormControl('')
+    idPatient: new FormControl('', [ Validators.required ]),
+    dateAppointment: new FormControl('', [ Validators.required ]),
+    date: new FormControl('', [ Validators.required ]),
+    hours: new FormControl('', [ Validators.required ]),
+    performAppointment: new FormControl('', [ Validators.required ]),
+    duration: new FormControl('', [ Validators.required ]),
+    status: new FormControl('', [ Validators.required ])
   });
   constructor(private appo: AppointmentService) { }
 
