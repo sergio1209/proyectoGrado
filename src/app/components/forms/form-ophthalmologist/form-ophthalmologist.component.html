@@ -1,0 +1,56 @@
+<ion-card>
+  <ion-card-content>
+    <form [formGroup]="ophthalmologistForm" (ngSubmit)="ngOnInit()">
+        <ion-col pull="string">
+            <ion-item>
+                <ion-label position="floating" >id</ion-label>
+
+                <ion-input placeholder="id" formControlName="id"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating" >names</ion-label>
+
+
+                <ion-input placeholder="names" formControlName="names"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating" >surnames</ion-label>
+
+                <ion-input placeholder="surnames" formControlName="surnames"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating" >specialty</ion-label>
+
+                <ion-input placeholder="specialty" formControlName="specialty"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating" >gender</ion-label>
+
+                <ion-input placeholder="gender" formControlName="gender"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating">phone</ion-label>
+
+                <ion-input placeholder="phone" formControlName="phone"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating" >cellPhone</ion-label>
+
+                <ion-input placeholder="cellPhone" formControlName="cellPhone"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating" >address</ion-label>
+
+                <ion-input placeholder="address" formControlName="address"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating" >age</ion-label>
+
+                <ion-input placeholder="age" formControlName="age"></ion-input>
+            </ion-item>
+
+            <ion-button color="primary" type="submit">Guardar</ion-button>
+        </ion-col>
+    </form>
+  </ion-card-content>
+</ion-card>

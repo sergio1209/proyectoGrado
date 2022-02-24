@@ -1,0 +1,45 @@
+<ion-card>
+  <ion-card-content>
+  <form [formGroup]="appointmentForm" (ngSubmit)="ngOnInit()">
+    <ion-grid>
+      <ion-row>
+        <ion-col pull="string" size="12">
+          <ion-item>
+            <ion-label position="floating" >idPatient</ion-label>
+            <ion-input placeholder="idPatient" formControlName="idPatient"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating" >
+              dateAppointment
+            </ion-label>
+
+            <ion-input placeholder="dateAppointment" formControlName="dateAppointment"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating" >date</ion-label>
+
+            <ion-input placeholder="date" formControlName="date"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating" >hours</ion-label>
+
+            <ion-input placeholder="hours" formControlName="hours"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating" >
+              performAppointment</ion-label>
+
+            <ion-input placeholder="performAppointment" formControlName="performAppointment"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating" >status</ion-label>
+
+            <ion-input placeholder="status" formControlName="status"></ion-input>
+          </ion-item>
+          <ion-button color="primary" type="submit">Guardar</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+  </ion-card-content>
+</ion-card>

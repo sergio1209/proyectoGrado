@@ -1,12 +1,26 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit} from '@angular/core';
+import { UserService } from 'src/services/user.service';
+import {ActivatedRoute} from '@angular/router';
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage {
+export class HomePage implements OnInit {
 
-  constructor() {}
+  public header = 'Header';
+
+  constructor(
+    private service: UserService) {
+  }
+
+  ngOnInit(): void {
+
+  }
+
+  onRouterOutletActivate(event: any) {
+    this.header = event.header;
+
+  }
 
 }
