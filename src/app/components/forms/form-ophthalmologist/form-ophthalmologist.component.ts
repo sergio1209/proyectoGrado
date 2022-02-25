@@ -25,5 +25,8 @@ export class FormOphthalmologistComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  submit() {
+    this.oph.up(this.ophthalmologistForm.value);
+  }
 
 }
