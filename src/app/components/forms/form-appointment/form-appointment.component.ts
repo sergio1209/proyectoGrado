@@ -9,6 +9,7 @@ import { AppointmentService } from 'src/services/appointment.service';
 })
 export class FormAppointmentComponent implements OnInit {
   private header = 'FORMULARIO DE REGISTRO DE CITAS';
+  
   public appointmentForm = new FormGroup({
     idPatient: new FormControl('', [ Validators.required ]),
     dateAppointment: new FormControl('', [ Validators.required ]),
