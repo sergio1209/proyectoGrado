@@ -1,6 +1,6 @@
 <ion-card>
   <ion-card-content>
-    <form [formGroup]="ophthalmologistForm" (ngSubmit)="ngOnInit()">
+    <form [formGroup]="ophthalmologistForm" (ngSubmit)="ophthalmologistForm.valid && submit()">
         <ion-col pull="string">
             <ion-item>
                 <ion-label position="floating" >identificación</ion-label>
