@@ -5,42 +5,42 @@
       <ion-row>
         <ion-col pull="string" size="12">
           <ion-item lines="inset" >
-            <ion-label position="floating" >idPatient</ion-label>
-            <ion-input placeholder="idPatient" formControlName="idPatient" required></ion-input>
+            <ion-label position="floating" >identificación</ion-label>
+            <ion-input placeholder="identificación" formControlName="idPatient" required></ion-input>
           </ion-item>
           <ion-item lines="inset" >
             <ion-label position="floating" >
-              dateAppointment
+              fecha cita
             </ion-label>
 
-            <ion-input placeholder="dateAppointment" formControlName="dateAppointment" required></ion-input>
+            <ion-input placeholder="fecha cita" formControlName="dateAppointment" required></ion-input>
           </ion-item>
           <ion-item lines="inset" >
-            <ion-label position="floating" >date</ion-label>
+            <ion-label position="floating" >fecha</ion-label>
 
-            <ion-input placeholder="date" formControlName="date" required></ion-input>
+            <ion-input placeholder="fecha" formControlName="date" required></ion-input>
           </ion-item>
           <ion-item lines="inset" >
-            <ion-label position="floating" >hours</ion-label>
+            <ion-label position="floating" >horas</ion-label>
 
-            <ion-input placeholder="hours" formControlName="hours" required></ion-input>
+            <ion-input placeholder="horas" formControlName="hours" required></ion-input>
           </ion-item>
           <ion-item lines="inset" >
             <ion-label position="floating" >
-              performAppointment</ion-label>
+              razón cita</ion-label>
 
-            <ion-input placeholder="performAppointment" formControlName="performAppointment" required></ion-input>
+            <ion-input placeholder="razón cita" formControlName="performAppointment" required></ion-input>
           </ion-item>
           <ion-item lines="inset" >
-            <ion-label position="floating" >status</ion-label>
+            <ion-label position="floating" >estado</ion-label>
 
-            <ion-input placeholder="status" formControlName="status" required></ion-input>
+            <ion-input placeholder="estado" formControlName="status" required></ion-input>
           </ion-item>
 
           <ion-item lines="inset" >
-            <ion-label position="floating" >duration</ion-label>
+            <ion-label position="floating" >duración</ion-label>
 
-            <ion-input placeholder="status" formControlName="duration" required></ion-input>
+            <ion-input placeholder="duración" formControlName="duration" required></ion-input>
           </ion-item>
           <ion-button disabled="{{appointmentForm.valid == false}}" color="primary" type="submit">Guardar</ion-button>
         </ion-col>
