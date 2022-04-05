@@ -22,4 +22,8 @@ export class FormUserComponent implements OnInit {
 
   }
 
+  submit() {
+    this.service.up(this.userForm.value);
+  }
+
 }

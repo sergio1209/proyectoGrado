@@ -1,9 +1,9 @@
-import {  Injectable } from "@angular/core";
-import { Subject } from "rxjs";
-import { debounceTime, tap } from "rxjs/operators";
-import { Ophthalmologist } from "src/models/ophthalmologist.interface";
-import { HttpGenericService } from "./base/http-generic.service";
-import { LoaderService } from "./loader.service";
+import {  Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
+import { debounceTime, tap } from 'rxjs/operators';
+import { Ophthalmologist } from 'src/models/ophthalmologist.interface';
+import { HttpGenericService } from './base/http-generic.service';
+import { LoaderService } from './loader.service';
 
 
 @Injectable({
@@ -11,14 +11,14 @@ import { LoaderService } from "./loader.service";
 })
 export class OphthalmologistService {
     private _ophthalmologist= new Subject<Ophthalmologist>();
-   
+
 
     constructor(
         private http: HttpGenericService<Ophthalmologist>,
         private loaderSvc: LoaderService,
-        
+
     ){
-       
+
         this.save();
     }
 
@@ -33,10 +33,10 @@ export class OphthalmologistService {
             }, async (err )=> {
                 await this.loaderSvc.loaderDismiss();
                 this.loaderSvc.sendError('Ocurrio un error realizando esta operación');
-            })
+            });
         });
     }
-   
+
     up(data: Ophthalmologist) {
         this._ophthalmologist.next(data);
     }

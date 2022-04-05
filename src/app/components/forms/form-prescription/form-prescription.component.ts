@@ -21,5 +21,8 @@ export class FormPrescriptionComponent implements OnInit {
 
   }
 
+  submit() {
+    this.presc.up(this.prescriptionForm.value);
+  }
 
 }

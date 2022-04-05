@@ -1,5 +1,5 @@
 <div id="container">
-    <form [formGroup]="prescriptionForm" (ngSubmit)="ngOnInit()">
+    <form [formGroup]="prescriptionForm" (ngSubmit)="prescriptionForm.valid && submit()">
         <ion-col pull="string">
             <ion-input placeholder="id" formControlName="id"></ion-input>
             <ion-input placeholder="date" formControlName="date"></ion-input>
