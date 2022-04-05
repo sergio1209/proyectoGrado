@@ -26,5 +26,8 @@ export class FormClinicHistoryComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  submit() {
+    this.ch.up(this.clinicHistoryForm.value);
+  }
 
 }

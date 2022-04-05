@@ -1,12 +1,12 @@
 <div id="container">
-    <form [formGroup]="diaryForm" (ngSubmit)="ngOnInit()">
+    <form [formGroup]="diaryForm" (ngSubmit)="diaryForm.valid && submit()">
         <ion-col pull="string">
             <ion-input placeholder="idPatient" formControlName="idPatient"></ion-input>
             <ion-input placeholder="namePatient" formControlName="namePatient"></ion-input>
             <ion-input placeholder="nameOphtalmologist" formControlName="nameOphtalmologist"></ion-input>
             <ion-input placeholder="status" formControlName="status"></ion-input>
             <ion-input placeholder="clinicalOrder" formControlName="clinicalOrder"></ion-input>
-            <ion-button color="primary" type="submit">Guardar</ion-button>
+            <ion-button disabled="{{diaryForm.valid == false}}" color="primary" type="submit">Guardar</ion-button>
         </ion-col>
     </form>
 </div>
