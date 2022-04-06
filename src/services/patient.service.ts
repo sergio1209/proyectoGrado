@@ -7,9 +7,10 @@ import {BehaviorSubject, Subject} from 'rxjs';
 import {HttpParams} from "@angular/common/http";
 
 @Injectable({
-    providedIn:'root'
+    providedIn: 'root'
 })
 export class PatientService {
+
 
   private _listPatient = new Subject<Patient[]>();
   private storagePatient = new BehaviorSubject({ data: [], count: 0 });
@@ -71,3 +72,4 @@ export class PatientService {
     this._keyword.next(keyword);
   }
 }
+

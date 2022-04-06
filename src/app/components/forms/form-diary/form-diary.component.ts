@@ -22,5 +22,7 @@ export class FormDiaryComponent implements OnInit {
   ngOnInit(): void {
 
   }
-
+  submit() {
+    this.dia.up(this.diaryForm.value);
+  }
 }
