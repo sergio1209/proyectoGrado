@@ -15,14 +15,20 @@ export class FormPrescriptionComponent implements OnInit {
     professional: new FormControl(''),
     description: new FormControl('')
   });
-  constructor(private presc: PrescriptionService) { }
+  constructor(private presc: PrescriptionService, private prescriptionSvc: PrescriptionService) { }
 
   ngOnInit(): void {
-
+    this.prescriptionForm.controls.idPatient.valueChanges.subscribe((resp: string) => {
+      if(resp.length > 0) {
+        this.prescriptionSvc.search(+resp);
+      }
+    });
   }
 
   submit() {
-    this.presc.up(this.prescriptionForm.value);
+    const body = this.prescriptionForm.value;
+    this.presc.up({ ...body, date: new Date(body.date), idPatient: +body.idPatient, dateNew: new Date(body.dateNew) });
+ 
   }
 
 }

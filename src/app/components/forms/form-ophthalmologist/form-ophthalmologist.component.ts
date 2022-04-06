@@ -21,12 +21,18 @@ export class FormOphthalmologistComponent implements OnInit {
     age: new FormControl('')
 
   });
-  constructor(private oph: OphthalmologistService) { }
+  constructor(private oph: OphthalmologistService,private ophthalmologistSvc: OphthalmologistService) { }
 
   ngOnInit(): void {
+    this.ophthalmologistForm.controls.idPatient.valueChanges.subscribe((resp: string) => {
+      if(resp.length > 0) {
+        this.ophthalmologistSvc.search(+resp);
+      }
+    });
   }
   submit() {
-    this.oph.up(this.ophthalmologistForm.value);
+    const body = this.ophthalmologistForm.value;
+    this.oph.up({ ...body, date: new Date(body.date), idPatient: +body.idPatient, dateNew: new Date(body.dateNew) });
   }
 
 }
