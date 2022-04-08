@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {PatientService} from "../../../../services/patient.service";
 import {Patient} from "../../../../models/patient.interface";
 
+
 @Component({
   selector: 'app-list-patient',
   templateUrl: './list-patient.component.html',
@@ -19,7 +20,7 @@ export class ListPatientComponent implements OnInit {
     this.patientSvc.keyword.subscribe(resp => {
       this.keyword = resp;
     });
-    this.patientSvc.listPatients.subscribe((resp: any) => {
+    this.patientSvc.infinite.subscribe((resp: any) => {
       if(this.page === 2) {
         this.listPatients = [ ...[], ...resp.data];
       } else {
