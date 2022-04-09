@@ -4,7 +4,7 @@ import { HttpGenericService } from './base/http-generic.service';
 import {LoaderService} from './loader.service';
 import {debounceTime, tap} from 'rxjs/operators';
 import {BehaviorSubject, Subject} from 'rxjs';
-import {HttpParams} from "@angular/common/http";
+import {HttpParams} from '@angular/common/http';
 
 @Injectable({
     providedIn: 'root'
@@ -14,7 +14,7 @@ export class PatientService {
     private _patient= new Subject<Patient>();
  private _listPatient = new Subject<Patient[]>();
 
- 
+
   private storagePatient = new BehaviorSubject({ data: [], count: 0 });
   private _keyword = new BehaviorSubject('');
   private _searchPatient = new Subject<number>();
@@ -29,7 +29,7 @@ export class PatientService {
     this.getAllPatients();
     this.validarPaciente();
     this.searched();
-    
+
   }
 
   private validarPaciente() {

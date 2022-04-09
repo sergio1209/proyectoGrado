@@ -19,11 +19,17 @@ export class FormUserComponent implements OnInit {
   constructor(private service: UserService) { }
 
   ngOnInit(): void {
-
+    this.userForm.controls.idPatient.valueChanges.subscribe((resp: string) => {
+      if(resp.length > 0) {
+        this.service.search(+resp);
+      }
+    });
   }
 
   submit() {
-    this.service.up(this.userForm.value);
+    const body = this.userForm.value;
+    this.service.up({ ...body, date: new Date(body.date), idPatient: +body.idPatient, dateNew: new Date(body.dateNew) });
+
   }
 
 }
