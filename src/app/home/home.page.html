@@ -2,46 +2,53 @@
   <ion-split-pane when="sm" contentId="main-content">
     <ion-menu contentId="main-content">
       <ion-header>
-        <ion-toolbar color="primary">
-          <ion-title>Menu</ion-title>
+        <ion-toolbar color="light">
+          <ion-item class="ion-margin-bottom ion-margin-top" lines="none" style="--background: transparent">
+            <ion-thumbnail style="margin: auto">
+              <ion-img src="https://freepikpsd.com/file/2019/10/medico-logo-png-5-Transparent-Images.png"></ion-img>
+            </ion-thumbnail>
+          </ion-item>
+          <ion-item class="ion-text-center">
+            <ion-label>LOGO EMPRESA</ion-label>
+          </ion-item>
         </ion-toolbar>
       </ion-header>
 
       <ion-content>
         <ion-list>
           <ion-menu-toggle [autoHide]="false">
-            <ion-item button="true" routerLink="/home">
-              <ion-icon slot="start" name='home'></ion-icon>
-              <ion-label >
+            <ion-item lines="none" button="true" routerLink="/home">
+              <span class="material-icons-outlined" slot="start">home</span>
+              <ion-label>
                 Home
               </ion-label>
             </ion-item>
-            <ion-item button="true" routerLink="/home/form-patient">
-              <ion-icon slot="start" name="person-add-outline"></ion-icon>
+            <ion-item lines="none" button="true" routerLink="/home/form-patient">
+              <span class="material-icons-outlined" slot="start">group_add</span>
               <ion-label >
                 Registrar Paciente
               </ion-label>
             </ion-item>
-            <ion-item button="true" routerLink="/home/form-ophthalmologist">
-              <ion-icon slot="start" name="person-add-outline"></ion-icon>
+            <ion-item lines="none" button="true" routerLink="/home/form-ophthalmologist">
+              <span class="material-icons-outlined" slot="start">assignment_ind</span>
               <ion-label >
                 Registrar Oftalmólogo
               </ion-label>
             </ion-item>
-            <ion-item button="true" routerLink="/home/form-appointment">
-              <ion-icon slot="start" name="calendar-outline"></ion-icon>
+            <ion-item lines="none" button="true" routerLink="/home/form-appointment">
+              <span class="material-icons-outlined" slot="start" >assignment_turned_in</span>
               <ion-label >
                 Registrar Cita
               </ion-label>
             </ion-item>
-            <ion-item button="true" routerLink="/home">
-              <ion-icon slot="start" name="newspaper-outline"></ion-icon>
+            <ion-item lines="none" button="true" routerLink="/home">
+              <span class="material-icons-outlined" slot="start">receipt_long</span>
               <ion-label >
                  Historia Clínica
               </ion-label>
             </ion-item>
-            <ion-item button="true" routerLink="/home">
-              <ion-icon slot="start" name="exit-outline"></ion-icon>
+            <ion-item lines="none" button="true" routerLink="/home">
+              <span class="material-icons-outlined" slot="start">close</span>
               <ion-label >salir
               </ion-label>
             </ion-item>
@@ -52,11 +59,11 @@
 
     <div class="ion-page" id="main-content">
       <ion-header>
-        <ion-toolbar>
+        <ion-toolbar  style="&#45;&#45;background: transparent" no-border class="toolbar">
           <ion-buttons slot="start">
             <ion-menu-toggle>
               <ion-button>
-                <ion-icon slot="icon-only" name="menu"></ion-icon>
+                <span class="material-icons-outlined">menu</span>
               </ion-button>
             </ion-menu-toggle>
           </ion-buttons>

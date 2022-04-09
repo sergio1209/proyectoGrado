@@ -1,86 +1,86 @@
 <ion-card class="ion-padding">
     <ion-card-content>
       <form [formGroup]="patientForm" (ngSubmit)="ngOnInit()">
-        <ion-item>
-          <ion-label position="floating">
+        <ion-item lines="none">
+          <ion-label position="fixed">
             identificación
           </ion-label>
           <ion-input placeholder="identificación" formControlName="identification"></ion-input>
         </ion-item>
-        <ion-item>
-          <ion-label position="floating">nombres</ion-label>
+        <ion-item  lines="none">
+          <ion-label position="fixed">nombres</ion-label>
           <ion-input placeholder="nombres" formControlName="names"></ion-input>
         </ion-item>
-        <ion-item>
-          <ion-label position="floating">apellidos</ion-label>
+        <ion-item  lines="none">
+          <ion-label position="fixed">apellidos</ion-label>
           <ion-input placeholder="apellidos" formControlName="surnames"></ion-input>
         </ion-item>
-        <ion-item>
-          <ion-label position="floating">dirección</ion-label>
+        <ion-item  lines="none">
+          <ion-label position="fixed">dirección</ion-label>
           <ion-input placeholder="dirección" formControlName="address"></ion-input>
         </ion-item>
-        <ion-item>
-          <ion-label position="floating">fecha cumpleaños</ion-label>
-          <ion-input placeholder="fecha cumpleaños" formControlName="DateofBirth"></ion-input>
+        <ion-item  lines="none">
+          <ion-label position="fixed">nacimiento</ion-label>
+          <ion-input type="date" placeholder="fecha de nacimiento" formControlName="DateofBirth"></ion-input>
         </ion-item>
-        <ion-item>
-          <ion-label position="floating">barrio
+        <ion-item  lines="none">
+          <ion-label position="fixed">barrio
           </ion-label>
           <ion-input placeholder="barrio" formControlName="neighborhood"></ion-input>
         </ion-item>
-        <ion-item>
-          <ion-label position="floating">teléfono</ion-label>
+        <ion-item  lines="none">
+          <ion-label position="fixed">teléfono</ion-label>
           <ion-input placeholder="teléfono" formControlName="phone"></ion-input>
         </ion-item>
-        <ion-item>
-          <ion-label position="floating">celular</ion-label>
+        <ion-item  lines="none">
+          <ion-label position="fixed">celular</ion-label>
           <ion-input placeholder="celular" formControlName="cellPhone"></ion-input>
         </ion-item>
-        <ion-item>
-          <ion-label position="floating">correo</ion-label>
+        <ion-item  lines="none">
+          <ion-label position="fixed">correo</ion-label>
           <ion-input placeholder="correo" formControlName="mail"></ion-input>
         </ion-item>
-        <ion-item>
-          <ion-label position="floating">acudiente</ion-label>
+        <ion-item  lines="none">
+          <ion-label position="fixed">acudiente</ion-label>
           <ion-input placeholder="acudiente" formControlName="guardian"></ion-input>
         </ion-item>
-        <ion-item>
-          <ion-label position="floating">relación 
+        <ion-item  lines="none">
+          <ion-label position="fixed">relación
           </ion-label>
           <ion-input placeholder="relación" formControlName="relationship"></ion-input>
         </ion-item>
-        <ion-item>
-          <ion-label position="floating">
+        <ion-item  lines="none">
+          <ion-label position="fixed">
             celular acudiente
           </ion-label>
           <ion-input placeholder="celular acudiente" formControlName="cellPhoneGuardian"></ion-input>
         </ion-item>
-        <ion-item>
+        <ion-item  lines="none">
 
-          <ion-label position="floating">
+          <ion-label position="fixed">
             dirección acudiente
           </ion-label>
           <ion-input placeholder="dirección acudiente" formControlName="addressGuardian"></ion-input>
         </ion-item>
-        <ion-item>
+        <ion-item  lines="none">
 
-          <ion-label position="floating" p>convenio</ion-label>
-          <ion-input laceholder="convenio" formControlName="agreement"></ion-input>
+          <ion-label position="fixed">convenio</ion-label>
+          <ion-input placeholder="convenio" formControlName="agreement"></ion-input>
         </ion-item>
-        <ion-item>
+        <ion-item  lines="none">
 
-          <ion-label position="floating" >número de licencia
+          <ion-label position="fixed" >número de licencia
           </ion-label>
           <ion-input placeholder="número de licencia" formControlName="licenseNumber"></ion-input>
         </ion-item>
-        <ion-item>
+        <ion-item  lines="none">
 
-          <ion-label position="floating">EPS</ion-label>
+          <ion-label position="fixed">EPS</ion-label>
           <ion-input placeholder="EPS" formControlName="EPS"></ion-input>
         </ion-item>
-        <ion-item>
+        <ion-item  lines="none">
 
-          <ion-label position="floating">tipo usuario</ion-label>
+          <ion-label position="fixed">tipo usuario</ion-label>
           <ion-input placeholder="tipo usuario" formControlName="TypeUser"></ion-input>
         </ion-item>
         <ion-button color="primary" type="submit">Guardar</ion-button>

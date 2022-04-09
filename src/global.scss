@@ -11,7 +11,7 @@
 
 /* Core CSS required for Ionic components to work properly */
 @import "~@ionic/angular/css/core.css";
-
+@import 'material-icons/iconfont/material-icons.css';
 /* Basic CSS for apps built with Ionic */
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
@@ -24,3 +24,52 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+ion-menu {
+  width: 100px;
+}
+
+.material-icons, .material-icons-outlined {
+  color: #868686;
+}
+
+.icon-int-menu {
+  font-size: 50px;
+  text-align: center !important;
+  margin: auto;
+  width: 100%;
+}
+
+ion-input {
+  --background: #e1e1e1;
+  border-radius: 10px;
+  color: black;
+  --padding-start: 10px;
+  --placeholder-color: dimgray;
+}
+
+ion-item {
+  --background: transparent;
+}
+
+
+@media only screen and (max-width: 1280px) and (min-width: 300px)  {
+  ion-menu {
+    width: 100%;
+  }
+}
+
+.btn-int-menu-options {
+  width: 125px;
+  height: 125px;
+  --box-shadow: none;
+}
+
+.btn-ios-style {
+  --box-shadow: none;
+}
+
+.text-menu-int {
+  font-weight: bold;
+  font-size: 14px;
+}

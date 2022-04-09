@@ -1,0 +1,11 @@
+ion-input {
+  --background: #e1e1e1;
+  border-radius: 10px;
+  color: black;
+  --padding-start: 10px;
+  --placeholder-color: dimgray;
+}
+
+ion-item {
+  --background: transparent;
+}
