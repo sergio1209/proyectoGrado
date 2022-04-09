@@ -30,10 +30,19 @@ export class FormPatientComponent implements OnInit {
     EPS: new FormControl(''),
     TypeUser: new FormControl('')
   });
-  constructor(private pati: PatientService) { }
+  constructor(private pati: PatientService,private patientSvc: PatientService) { }
 
   ngOnInit(): void {
-
+    this.patientForm.controls.idPatient.valueChanges.subscribe((resp: string) => {
+      if(resp.length > 0) {
+        this.patientSvc.search(+resp);
+      }
+    });
   }
-
+  submit() {
+    const body = this.patientForm.value;
+    this.pati.up({ ...body, date: new Date(body.date), idPatient: +body.idPatient, dateNew: new Date(body.dateNew) });
+  
+  }
+ 
 }
