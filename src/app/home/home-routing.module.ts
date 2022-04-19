@@ -5,6 +5,7 @@ import { FormDiaryComponent } from '../components/forms/form-diary/form-diary.co
 import { FormOphthalmologistComponent } from '../components/forms/form-ophthalmologist/form-ophthalmologist.component';
 import { FormPatientComponent } from '../components/forms/form-patient/form-patient.component';
 import { HomePage } from './home.page';
+import {ListPatientComponent} from "../components/list/list-patient/list-patient.component";
 
 const routes: Routes = [
   {
@@ -15,7 +16,8 @@ const routes: Routes = [
         { path: 'form-diary', component: FormDiaryComponent},
         { path: 'form-patient', component: FormPatientComponent, data: { title: 'Formulario de paciente'} },
         { path: 'form-ophthalmologist', component: FormOphthalmologistComponent, data: { title: 'Formulario de paciente 1'}},
-        { path: 'form-appointment', component: FormAppointmentComponent, data: { title: 'Formulario de paciente 2'}}
+        { path: 'form-appointment', component: FormAppointmentComponent, data: { title: 'Formulario de paciente 2'}},
+        { path: 'list-patient', component: ListPatientComponent}
       ]
 
   }

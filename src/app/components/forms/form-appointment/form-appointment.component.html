@@ -1,42 +1,48 @@
 <ion-card>
   <ion-card-content>
-  <form [formGroup]="appointmentForm" (ngSubmit)="ngOnInit()">
+  <form [formGroup]="appointmentForm" (ngSubmit)="appointmentForm.valid && submit()">
     <ion-grid>
       <ion-row>
         <ion-col pull="string" size="12">
-          <ion-item>
-            <ion-label position="floating" >idPatient</ion-label>
-            <ion-input placeholder="idPatient" formControlName="idPatient"></ion-input>
+          <ion-item lines="none" >
+            <ion-label position="fixed" >identificación</ion-label>
+            <ion-input placeholder="identificación" formControlName="idPatient" required></ion-input>
           </ion-item>
-          <ion-item>
-            <ion-label position="floating" >
-              dateAppointment
+          <ion-item lines="none" >
+            <ion-label position="fixed" >
+              fecha cita
             </ion-label>
 
-            <ion-input placeholder="dateAppointment" formControlName="dateAppointment"></ion-input>
+            <ion-input placeholder="fecha cita" type="date" formControlName="dateAppointment" required></ion-input>
           </ion-item>
-          <ion-item>
-            <ion-label position="floating" >date</ion-label>
+          <ion-item lines="none" >
+            <ion-label position="fixed" >fecha</ion-label>
 
-            <ion-input placeholder="date" formControlName="date"></ion-input>
+            <ion-input placeholder="fecha" formControlName="date" type="date"  required></ion-input>
           </ion-item>
-          <ion-item>
-            <ion-label position="floating" >hours</ion-label>
+          <ion-item lines="none" >
+            <ion-label position="fixed" >horas</ion-label>
 
-            <ion-input placeholder="hours" formControlName="hours"></ion-input>
+            <ion-input placeholder="horas" formControlName="hours" required></ion-input>
           </ion-item>
-          <ion-item>
-            <ion-label position="floating" >
-              performAppointment</ion-label>
+          <ion-item lines="none" >
+            <ion-label position="fixed" >
+              razón cita</ion-label>
 
-            <ion-input placeholder="performAppointment" formControlName="performAppointment"></ion-input>
+            <ion-input placeholder="razón cita" formControlName="performAppointment" required></ion-input>
           </ion-item>
-          <ion-item>
-            <ion-label position="floating" >status</ion-label>
+          <ion-item lines="none" >
+            <ion-label position="fixed" >estado</ion-label>
 
-            <ion-input placeholder="status" formControlName="status"></ion-input>
+            <ion-input placeholder="estado" formControlName="status" required></ion-input>
           </ion-item>
-          <ion-button color="primary" type="submit">Guardar</ion-button>
+
+          <ion-item lines="none" >
+            <ion-label position="fixed" >duración</ion-label>
+
+            <ion-input placeholder="duración" formControlName="duration" required></ion-input>
+          </ion-item>
+          <ion-button disabled="{{appointmentForm.valid == false}}" color="primary" type="submit">Guardar</ion-button>
         </ion-col>
       </ion-row>
     </ion-grid>

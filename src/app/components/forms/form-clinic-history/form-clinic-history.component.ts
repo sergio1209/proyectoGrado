@@ -22,9 +22,20 @@ export class FormClinicHistoryComponent implements OnInit {
     pulse: new FormControl(''),
     reasonConsultation: new FormControl('')
   });
-  constructor(private ch: ClinicHistoryService) { }
+  constructor(private ch: ClinicHistoryService, private clinicHistorySvc: ClinicHistoryService) { }
 
   ngOnInit(): void {
+    this.clinicHistoryForm.controls.idPatient.valueChanges.subscribe((resp: string) => {
+      if(resp.length > 0) {
+        this.clinicHistorySvc.search(+resp);
+      }
+    });
   }
+  submit() {
+    
+    const body = this.clinicHistoryForm.value;
+    this.ch.up({ ...body, date: new Date(body.date), idPatient: +body.idPatient, dateNew: new Date(body.dateNew) });
+  }
+  
 
 }
